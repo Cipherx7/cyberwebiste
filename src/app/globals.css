@@ -1,0 +1,159 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* =======================
+   BASE THEME VARIABLES
+======================= */
+@layer base {
+  :root {
+    --color-primary: 0 0 0;
+    --color-secondary: 23 23 23;
+    --color-secondary-hover: 38 38 38;
+    --color-target: 255 196 0;
+    --color-text: 255 255 255;
+    --color-text-light: 220 220 220;
+    --color-accent: 255 225 0;
+    --color-mobile-menu: 15 15 15;
+  }
+
+  :root[data-theme='light'] {
+    --color-primary: 255 255 255;
+    --color-secondary: 255 245 200;
+    --color-secondary-hover: 255 235 150;
+    --color-text: 0 0 0;
+    --color-target: 200 150 0;
+    --color-mobile-menu: 255 235 180;
+  }
+
+  :root[data-theme='dark'] {
+    --color-primary: 0 0 0;
+    --color-secondary: 23 23 23;
+    --color-secondary-hover: 38 38 38;
+    --color-text: 255 255 255;
+    --color-target: 255 196 0;
+  }
+
+  /* ---------- GLOBAL RESET ---------- */
+  * {
+    border-color: rgb(var(--color-target));
+    @apply box-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    font-size: 16px; /* ✅ FIXED BASE SIZE */
+  }
+
+  body {
+    background-color: rgb(var(--color-primary));
+    color: rgb(var(--color-text));
+    overflow-x: hidden; /* ✅ MOBILE OVERFLOW FIX */
+    @apply min-h-screen m-0 p-0 font-sans antialiased leading-relaxed;
+  }
+}
+
+/* =======================
+   COMPONENT STYLES
+======================= */
+@layer components {
+
+  /* ---------- Titles ---------- */
+  .home-title {
+    @apply font-bold text-center;
+    @apply text-3xl sm:text-5xl lg:text-6xl;
+    margin-bottom: 1.25rem;
+    text-shadow: 0 0 12px rgba(var(--color-target), 0.55);
+  }
+
+  /* ---------- Section Wrapper ---------- */
+  .section {
+    @apply px-4 py-10;
+  }
+
+  @media (min-width: 640px) {
+    .section {
+      @apply px-8 py-14;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .section {
+      @apply px-16 py-24;
+    }
+  }
+
+  /* ---------- About Section ---------- */
+  .about-section {
+    @apply flex flex-col items-center gap-6;
+  }
+
+  .about-logo {
+    @apply w-28 h-28 sm:w-32 sm:h-32;
+  }
+
+  .about-content {
+    @apply flex flex-col items-center gap-6;
+    @apply md:flex-row md:items-start md:gap-12;
+    @apply w-full max-w-5xl;
+  }
+
+  .about-text {
+    @apply text-sm sm:text-base lg:text-lg;
+    @apply text-center md:text-left;
+    @apply text-[rgb(var(--color-text-light))];
+  }
+
+  /* ---------- Card Base ---------- */
+  .card {
+    @apply rounded-2xl p-5 sm:p-6;
+    background-color: rgb(var(--color-secondary));
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+  }
+
+  .card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.35);
+  }
+}
+
+/* =======================
+   UTILITIES & EFFECTS
+======================= */
+@layer utilities {
+
+  /* ---------- Glitch Text ---------- */
+  @keyframes glitch {
+    0%   { text-shadow: 2px 0 rgb(var(--color-accent)); }
+    25%  { text-shadow: -2px 0 rgb(var(--color-accent)); }
+    50%  { text-shadow: 2px 0 rgb(var(--color-accent)); }
+    75%  { text-shadow: -2px 0 rgb(var(--color-accent)); }
+    100% { text-shadow: 2px 0 rgb(var(--color-accent)); }
+  }
+
+  .glitch-text {
+    animation: glitch 1s linear infinite;
+  }
+
+  /* ---------- Mobile Touch + Alignment Fix ---------- */
+  @media (max-width: 640px) {
+    button,
+    a {
+      min-height: 44px;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    section {
+      overflow-x: hidden;
+    }
+  }
+
+  /* ---------- Hover Highlight ---------- */
+  .hover\:brackets-white:hover .text-gray-400 {
+    color: rgb(var(--color-target));
+  }
+}
