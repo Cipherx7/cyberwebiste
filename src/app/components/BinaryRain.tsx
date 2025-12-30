@@ -22,6 +22,11 @@ export const BinaryRain = () => {
     const columns = canvas.width / fontSize
     const drops: number[] = Array(Math.floor(columns)).fill(1)
 
+    // Speed control: Lower FPS = slower animation, Higher FPS = faster animation
+    const FPS = 30 // Adjust this value: try 15 (slow), 30 (medium), 60 (fast)
+    const frameDelay = 1000 / FPS
+    let lastFrameTime = 0
+
     const draw = () => {
       if (!ctx) return
 
@@ -48,12 +53,17 @@ export const BinaryRain = () => {
       }
     }
 
-    const loop = () => {
-      draw()
+    const loop = (currentTime: number) => {
       animationRef.current = requestAnimationFrame(loop)
+
+      const elapsed = currentTime - lastFrameTime
+      if (elapsed > frameDelay) {
+        lastFrameTime = currentTime - (elapsed % frameDelay)
+        draw()
+      }
     }
 
-    loop()
+    loop(0)
 
     // Resize canvas on window resize
     const handleResize = () => {

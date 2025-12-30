@@ -1,13 +1,12 @@
 import { About } from './components/About'
 import { CTFs } from './components/CTFs'
 import { Contact } from './components/Contact'
-import { Footer } from './components/Footer'
 import { Header } from './components/Header'
 import { Hero } from './components/Hero'
 import { Events } from './components/Events'
 import { SocialLinks } from './components/SocialLinks'
 import { Partners } from './components/Partners'
-import Team from './components/Team' 
+import Team from './components/Team'
 
 export default function Home() {
   return (
@@ -23,7 +22,6 @@ export default function Home() {
         <Contact />
         <SocialLinks />
       </main>
-      <Footer />
     </>
   )
 }

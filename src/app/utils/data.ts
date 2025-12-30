@@ -4,9 +4,17 @@
 export const navigationLinks = [
   { label: 'Home', path: '#home' },
   { label: 'About Us', path: '#about' },
-  { label: 'CTFs', path: '#ctfs' },
-  { label: 'Events', path: '#events' },
-  { label: 'Partners', path: '#partners' },
+  { label: 'CTFs', path: '/ctfs' },
+  { label: 'Events', path: '/events' },
+  {
+    label: 'Resources',
+    path: '#resources',
+    subItems: [
+      { label: 'Tools', path: '/resources/tools' },
+      { label: 'Blog', path: '/resources/blog' },
+      { label: 'PDFs', path: '/resources/pdfs' }
+    ]
+  },
   { label: 'Team', path: '#team' },
   { label: 'Contact', path: '#contact' }
 ]

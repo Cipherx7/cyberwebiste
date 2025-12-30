@@ -13,6 +13,8 @@ export const metadata: Metadata = {
     google: 'NK_YRyzH-6vt7WN_fUlh27kl9Rbv60jNBhDY_H7oLb8'
   }
 }
+import { Footer } from './components/Footer'
+
 export default function RootLayout({
   children
 }: {
@@ -21,7 +23,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={saira.className}>
-        <Providers>{children}</Providers>
+        <Providers>
+          {children}
+          <Footer />
+        </Providers>
       </body>
     </html>
   )

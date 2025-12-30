@@ -4,6 +4,7 @@ import Image from 'next/image'
 import { MotionDiv, MotionP } from '../lib/motion'
 import Link from 'next/link'
 import { SectionContainer } from './SectionContainer'
+import { ArrowRight, Flag } from 'lucide-react'
 
 export const CTFs = () => {
   return (
@@ -85,9 +86,9 @@ export const CTFs = () => {
           className="mt-10"
         >
           <Link
-            href="#events"
+            href="/ctfs"
             className="
-    inline-flex items-center justify-center
+    inline-flex items-center justify-center gap-2
     rounded-lg
     border border-[rgb(var(--color-target))]
     px-7 py-3
@@ -100,9 +101,8 @@ export const CTFs = () => {
     relative z-20 pointer-events-auto
   "
           >
-            Explore Upcoming CTFs
+            Explore Upcoming CTFs <ArrowRight size={18} />
           </Link>
-
         </MotionDiv>
       </MotionDiv>
     </SectionContainer>

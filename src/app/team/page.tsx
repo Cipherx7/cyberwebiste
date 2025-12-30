@@ -24,7 +24,7 @@ const teamMembers = [
     name: "Abhishek Pawar",
     role: "Co-founder",
     bio: "Co-founder of CyberX | Building the Future of Cyber Defense",
-    image: "/team/abhishekh.jpeg",
+    image: "",
     social: {
       linkedin: "https://www.linkedin.com/in/pawar-abhishek17/",
       github: "https://github.com/cipherx7",
@@ -91,20 +91,6 @@ const teamMembers = [
     connectLink: "http://www.linkedin.com/in/pranit-chavan-217447291"
   },
   {
-    id: 7,
-    name: "Manav Mundada",
-    role: "Community Manager ",
-    bio: "Bringing people together, one conversation at a time",
-    image: "/team/manav.jpg",
-    social: {
-      linkedin: "https://www.linkedin.com/in/manav-mundada-4381b028a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-      github: "https://github.com/manav3009",
-      instagram: "https://www.instagram.com/manav_mundada?igsh=MThwbHIyMXYxdXVucQ==",
-      website: "http://flowcv.me/manav-mahesh-mundada-in",
-    },
-    connectLink: "https://www.linkedin.com/in/manav-mundada-4381b028a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
-  },
-  {
     id: 8,
     name: "Pranav Patil ",
     role: "Core advisor  ",
@@ -140,8 +126,8 @@ const teamMembers = [
     image: "/team/Om Songire.jpg",
     social: {
       linkedin: "https://www.linkedin.com/in/omsongire",
-      github:"https://github.com/Omsongire23",
-      instagram:"https://www.instagram.com/omsongire23?igsh=MWV3b3J3N25xNDZydQ=="
+      github: "https://github.com/Omsongire23",
+      instagram: "https://www.instagram.com/omsongire23?igsh=MWV3b3J3N25xNDZydQ=="
 
     },
     connectLink: "https://www.linkedin.com/in/omsongire"
@@ -154,7 +140,7 @@ const teamMembers = [
     image: "/team/Rohit.jpg",
     social: {
       linkedin: "https://www.linkedin.com/in/rohit-lavre",
-      
+
 
     },
     connectLink: "https://www.linkedin.com/in/rohit-lavre"
@@ -167,7 +153,7 @@ const teamMembers = [
     image: "/team/Yukta Geete.jpg",
     social: {
       linkedin: "https://www.linkedin.com/in/yukta-geete-05b52b374?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-      
+
 
     },
     connectLink: "https://www.linkedin.com/in/yukta-geete-05b52b374?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
@@ -191,7 +177,7 @@ export default function TeamPage() {
       <SectionContainer
         id="team"
         title={"The Faces Behind CyberX"
-          
+
         }
       >
         {/* BACK BUTTON */}
