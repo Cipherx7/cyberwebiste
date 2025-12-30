@@ -190,10 +190,8 @@ export default function TeamPage() {
       {/* 🟡 TITLE COLOR FIXED */}
       <SectionContainer
         id="team"
-        title={
-          <span className="text-[rgb(var(--color-target))]">
-            The Faces Behind CyberX
-          </span>
+        title={"The Faces Behind CyberX"
+          
         }
       >
         {/* BACK BUTTON */}
