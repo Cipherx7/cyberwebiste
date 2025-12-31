@@ -147,6 +147,19 @@ const teamMembers = [
   },
   {
     id: 12,
+    name: "Tanmay Hirodkar ",
+    role: "Developer",
+    bio: "Tanmay Hirodkar, Ethical hacker/Entrepreneur, Turning Cyber Awareness into Unforgettable Events. ",
+    image: "/team/tanmay.jpg",
+    social: {
+      linkedin: "https://in.linkedin.com/in/hirodkar",
+
+
+    },
+    connectLink: "https://in.linkedin.com/in/hirodkar"
+  },
+  {
+    id: 13,
     name: "Yukta Geete",
     role: "Event manager",
     bio: "Yukta Geete, Ethical hacker/Entrepreneur, Turning Cyber Awareness into Unforgettable Events. ",
@@ -158,6 +171,7 @@ const teamMembers = [
     },
     connectLink: "https://www.linkedin.com/in/yukta-geete-05b52b374?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
   },
+
 ]
 const socialIcons = {
   linkedin: Linkedin,
