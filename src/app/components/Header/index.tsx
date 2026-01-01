@@ -15,14 +15,17 @@ export const Header = () => {
       className="fixed z-30 w-full bg-primary px-10 sm:px-6"
     >
       <div className="mx-auto max-w-5xl">
-        <div className="flex h-28 items-center justify-between sm:hidden">
+        {/* MOBILE VIEW (< md) */}
+        <div className="flex h-20 items-center justify-between md:hidden">
+          <Logo />
+          <MobileMenu />
+        </div>
+
+        {/* DESKTOP VIEW (>= md) */}
+        <div className="hidden h-28 items-center justify-between md:flex">
           <Logo />
           <NavBar />
           <ThemeSwitcher />
-        </div>
-        <div className="hidden h-28 items-center justify-between sm:flex">
-          <Logo />
-          <MobileMenu />
         </div>
       </div>
     </MotionHeader>

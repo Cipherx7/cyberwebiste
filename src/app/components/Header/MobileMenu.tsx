@@ -33,21 +33,19 @@ export const MobileMenu = () => {
       {show && (
         <>
           <div
-            className={`${
-              animate && 'opacity-80'
-            } fixed left-0 top-0 z-20 h-screen w-screen bg-black opacity-0 transition duration-300`}
+            className={`${animate && 'opacity-80'
+              } fixed left-0 top-0 z-20 h-screen w-screen bg-black opacity-0 transition duration-300`}
           ></div>
           <div
-            className={`${
-              animate
+            className={`${animate
                 ? 'translate-x-0 opacity-100'
                 : 'translate-x-full opacity-0'
-            } fixed bottom-0 right-0 top-0 z-30 flex h-screen w-2/3 flex-col items-center justify-center gap-16 bg-secondary p-4 opacity-0 transition duration-300`}
+              } fixed bottom-0 right-0 top-0 z-30 flex h-screen w-2/3 flex-col items-center justify-center gap-16 bg-secondary p-4 opacity-0 transition duration-300`}
           >
             <button onClick={closeMenu}>
               <X />
             </button>
-            <NavBar />
+            <NavBar mobile={true} />
             <ThemeSwitcher />
           </div>
         </>
