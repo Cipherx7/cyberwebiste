@@ -16,6 +16,8 @@ export const metadata: Metadata = {
 }
 import { Footer } from './components/Footer'
 
+import { ScrollProgress } from './components/ScrollProgress'
+
 export default function RootLayout({
   children
 }: {
@@ -24,6 +26,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={`${inter.variable} ${orbitron.variable} font-sans bg-primary text-white`}>
+        <ScrollProgress />
         <Providers>
           {children}
           <Footer />

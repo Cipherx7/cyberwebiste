@@ -105,7 +105,7 @@ export default function EventsPage() {
                       p-5
                       hover:border-target
                       hover:bg-target/5
-                      hover:shadow-[0_0_20px_rgba(250,204,21,0.1)]
+                      hover:shadow-[0_0_25px_rgba(250,204,21,0.25)]
                       hover:scale-[1.01]
                       transition-all duration-300
                       group

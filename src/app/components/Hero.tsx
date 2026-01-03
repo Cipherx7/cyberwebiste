@@ -45,9 +45,9 @@ export const Hero = () => {
 
         {/* WE ARE */}
         <MotionP
-          initial={{ opacity: 0, y: -20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
+          initial={{ opacity: 0, y: -20, letterSpacing: '0em' }}
+          whileInView={{ opacity: 1, y: 0, letterSpacing: '0.5em' }}
+          transition={{ duration: 0.8, ease: 'easeOut' }}
           className="mb-6 text-sm sm:text-base tracking-[0.5em] uppercase text-target font-medium"
         >
           We Are
@@ -55,9 +55,9 @@ export const Hero = () => {
 
         {/* CYBERX */}
         <MotionH1
-          initial={{ opacity: 0, scale: 0.9 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.8, type: 'spring' }}
+          initial={{ opacity: 0, scale: 0.5, filter: 'blur(10px)' }}
+          whileInView={{ opacity: 1, scale: 1, filter: 'blur(0px)' }}
+          transition={{ duration: 0.8, type: 'spring', bounce: 0.5 }}
           className="font-extrabold leading-none font-orbitron tracking-tighter"
         >
           <span className="block text-6xl sm:text-8xl md:text-9xl lg:text-[10rem] bg-clip-text text-transparent bg-gradient-to-b from-white to-gray-500">
@@ -69,7 +69,7 @@ export const Hero = () => {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.3, duration: 0.6 }}
+          transition={{ delay: 0.3, duration: 0.6, ease: 'easeOut' }}
           className="mt-6"
         >
           <span className="text-xl sm:text-2xl md:text-3xl text-gray-300 font-light">
@@ -81,7 +81,7 @@ export const Hero = () => {
         <MotionP
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.5, duration: 0.6 }}
+          transition={{ delay: 0.5, duration: 0.6, ease: 'easeOut' }}
           className="mt-8 max-w-2xl text-base sm:text-lg text-gray-400 leading-relaxed"
         >
           Where{' '}
@@ -95,7 +95,7 @@ export const Hero = () => {
         <MotionDiv
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.7, duration: 0.6 }}
+          transition={{ delay: 0.7, type: 'spring', stiffness: 100 }}
           className="mt-12 flex flex-col sm:flex-row gap-6 items-center"
         >
           <Link
@@ -127,9 +127,9 @@ export const Hero = () => {
 
         {/* SOCIALS */}
         <MotionDiv
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ delay: 1 }}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.9, duration: 0.5 }}
           className="mt-16 flex gap-8 text-2xl text-gray-400"
         >
           {[

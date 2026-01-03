@@ -83,7 +83,7 @@ export default function BlogPage() {
 
                                 <div className="space-y-2 text-sm sm:text-base">
                                     <p className="text-gray-500">
-                                        <span className="text-target">root@cyberx:~$</span> ./fetch_logs.sh --latest
+                                        <span className="text-target">root@cyberx:~$</span> ./fetch_logs.sh --latest<span className="animate-pulse">_</span>
                                     </p>
                                     <p className="text-gray-400">
                                         [+] Establishing secure connection... <span className="text-green-500">Done</span>

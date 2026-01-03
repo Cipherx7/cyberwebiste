@@ -16,7 +16,7 @@ export default function Team() {
         className="relative max-w-6xl mx-auto px-4"
       >
         {/* PANEL FRAME */}
-        <div className="relative border border-target/40 rounded-2xl p-8 sm:p-10 bg-secondary/60 backdrop-blur">
+        <div className="relative border border-target/40 rounded-2xl p-8 sm:p-10 bg-secondary/60 backdrop-blur hover:shadow-[0_0_30px_rgba(250,204,21,0.15)] transition-all duration-500">
 
           {/* TOP BAR */}
           <div className="flex items-center justify-between mb-8">

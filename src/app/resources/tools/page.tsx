@@ -90,6 +90,19 @@ const toolsData = [
     }
 ]
 
+const getCategoryColor = (category: string) => {
+    switch (category) {
+        case 'Network Styling': return 'text-blue-400 border-blue-500/30 bg-blue-500/10'
+        case 'Exploitation': return 'text-red-400 border-red-500/30 bg-red-500/10'
+        case 'Analysis': return 'text-purple-400 border-purple-500/30 bg-purple-500/10'
+        case 'Web Security': return 'text-orange-400 border-orange-500/30 bg-orange-500/10'
+        case 'Wireless': return 'text-cyan-400 border-cyan-500/30 bg-cyan-500/10'
+        case 'Cracking': return 'text-yellow-400 border-yellow-500/30 bg-yellow-500/10'
+        case 'Database': return 'text-green-400 border-green-500/30 bg-green-500/10'
+        default: return 'text-gray-400 border-gray-700 bg-gray-800/50'
+    }
+}
+
 export default function ToolsPage() {
     const [searchTerm, setSearchTerm] = useState('')
 
@@ -154,14 +167,14 @@ export default function ToolsPage() {
                                 viewport={{ once: true }}
                                 transition={{ duration: 0.4, delay: index * 0.05 }}
                             >
-                                <div className="h-full bg-secondary/60 backdrop-blur-md border border-white/10 rounded-2xl p-6 hover:border-target hover:shadow-[0_0_20px_rgba(250,204,21,0.1)] hover:-translate-y-1 transition-all duration-300 md:hover:scale-[1.02] group flex flex-col">
+                                <div className="h-full bg-secondary/60 backdrop-blur-md border border-white/10 rounded-2xl p-6 hover:border-target hover:shadow-[0_0_25px_rgba(250,204,21,0.2)] hover:-translate-y-1 transition-all duration-300 md:hover:scale-[1.02] group flex flex-col">
 
                                     {/* CARD HEADER */}
                                     <div className="flex items-start justify-between mb-4">
                                         <div className="p-3 rounded-lg bg-target/10 text-target group-hover:bg-target group-hover:text-black transition-colors">
                                             <Icon size={28} />
                                         </div>
-                                        <span className="text-xs font-mono text-gray-500 border border-gray-700 px-2 py-1 rounded">
+                                        <span className={`text-xs font-mono px-2 py-1 rounded border ${getCategoryColor(tool.category)}`}>
                                             {tool.category}
                                         </span>
                                     </div>
