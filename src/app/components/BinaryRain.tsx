@@ -34,7 +34,7 @@ export const BinaryRain = () => {
       ctx.fillStyle = 'rgba(0, 0, 0, 0.05)'
       ctx.fillRect(0, 0, canvas.width, canvas.height)
 
-      ctx.fillStyle = '#00FF00' // green text
+      ctx.fillStyle = '#FACC15' // target color (yellow)
       ctx.font = `${fontSize}px monospace`
 
       for (let i = 0; i < drops.length; i++) {
@@ -82,7 +82,7 @@ export const BinaryRain = () => {
   return (
     <canvas
       ref={canvasRef}
-      className="fixed top-0 left-0 z-0 h-full w-full bg-black opacity-20"
+      className="absolute top-0 left-0 z-0 h-full w-full"
     />
   )
 }

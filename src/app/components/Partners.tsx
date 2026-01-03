@@ -83,7 +83,7 @@ export const Partners = () => {
                 />
 
                 {/* NAME */}
-                <p className="mt-4 text-sm sm:text-base font-semibold text-[rgb(var(--color-target))]">
+                <p className="mt-4 text-sm sm:text-base font-semibold text-target">
                   {partner.name}
                 </p>
               </motion.a>
@@ -99,7 +99,7 @@ export const Partners = () => {
       {/* DESCRIPTION */}
       <p className="mx-auto mt-8 max-w-3xl text-center text-gray-300 text-base sm:text-lg leading-relaxed px-4">
         We collaborate with organizations that believe in{' '}
-        <span className="text-[rgb(var(--color-target))] font-semibold">
+        <span className="text-target font-semibold">
           cybersecurity, innovation, and community-driven growth
         </span>.
         Together, we host events, build tools, and empower the next generation of
@@ -115,11 +115,11 @@ export const Partners = () => {
           className="
             inline-flex items-center justify-center
             rounded-xl
-            border border-[rgb(var(--color-target))]
+            border border-target
             px-8 py-3
             font-semibold
-            text-[rgb(var(--color-target))]
-            hover:bg-[rgb(var(--color-target))]
+            text-target
+            hover:bg-target
             hover:text-black
             transition
             pointer-events-auto

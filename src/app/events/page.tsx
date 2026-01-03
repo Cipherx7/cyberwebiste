@@ -36,30 +36,30 @@ export default function EventsPage() {
     return (
         <div className="bg-black min-h-screen relative overflow-hidden">
             {/* BACKGROUND ELEMENTS */}
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_rgba(var(--color-target),0.05),_transparent_40%)] pointer-events-none" />
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(250,204,21,0.05),transparent_40%)] pointer-events-none" />
             <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:50px_50px] [mask-image:radial-gradient(ellipse_at_center,black_40%,transparent_100%)] pointer-events-none" />
 
             <SectionContainer id="events" title="CyberX Events Calendar">
                 {/* BACK BUTTON */}
                 <Link
                     href="/"
-                    className="relative z-10 inline-flex items-center gap-2 mb-10 text-gray-400 hover:text-[rgb(var(--color-target))] hover:translate-x-[-5px] transition-all"
+                    className="relative z-10 inline-flex items-center gap-2 mb-10 text-gray-400 hover:text-target hover:translate-x-[-5px] transition-all"
                 >
                     <ArrowLeft size={18} /> Back to Home
                 </Link>
 
                 {/* INTRO TEXT */}
                 <div className="relative z-10 max-w-4xl mx-auto text-center mb-16">
-                    <div className="inline-flex items-center justify-center gap-3 mb-6 px-6 py-2 rounded-full border border-[rgba(var(--color-target),0.3)] bg-[rgba(var(--color-target),0.05)]">
-                        <Calendar className="text-[rgb(var(--color-target))]" size={20} />
-                        <span className="text-[rgb(var(--color-target))] font-semibold tracking-wide uppercase text-sm">
+                    <div className="inline-flex items-center justify-center gap-3 mb-6 px-6 py-2 rounded-full border border-target/30 bg-target/5">
+                        <Calendar className="text-target" size={20} />
+                        <span className="text-target font-semibold tracking-wide uppercase text-sm">
                             Community Events & Workshops
                         </span>
                     </div>
 
                     <h2 className="text-4xl sm:text-6xl font-extrabold mb-6 tracking-tight">
                         Stay Updated with our <br className="hidden sm:block" />
-                        <span className="bg-gradient-to-r from-white via-[rgb(var(--color-target))] to-[rgb(var(--color-target))] bg-clip-text text-transparent">
+                        <span className="bg-gradient-to-r from-white via-target to-target bg-clip-text text-transparent">
                             Latest Operations
                         </span>
                     </h2>
@@ -77,7 +77,7 @@ export default function EventsPage() {
                     <div className="space-y-4 max-h-[800px] overflow-y-auto pr-4 scrollbar-custom pb-20">
                         <div className="sticky top-0 bg-black/95 backdrop-blur-xl py-4 z-20 border-b border-white/10 mb-4">
                             <h3 className="text-2xl font-bold flex items-center gap-2">
-                                <Activity size={24} className="text-[rgb(var(--color-target))]" />
+                                <Activity size={24} className="text-target" />
                                 Event Logs
                             </h3>
                         </div>
@@ -98,14 +98,14 @@ export default function EventsPage() {
                                         onClick={() => setSelectedEvent(event)}
                                         className="
                       w-full text-left
-                      bg-[rgba(20,20,20,0.6)]
+                      bg-secondary/60
                       backdrop-blur-md
                       border border-white/10
                       rounded-2xl
                       p-5
-                      hover:border-[rgb(var(--color-target))]
-                      hover:bg-[rgba(var(--color-target),0.02)]
-                      hover:shadow-[0_0_20px_rgba(var(--color-target),0.1)]
+                      hover:border-target
+                      hover:bg-target/5
+                      hover:shadow-[0_0_20px_rgba(250,204,21,0.1)]
                       hover:scale-[1.01]
                       transition-all duration-300
                       group
@@ -114,12 +114,12 @@ export default function EventsPage() {
                     "
                                     >
                                         {/* Hover Glow Effect */}
-                                        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[rgba(var(--color-target),0.05)] to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000" />
+                                        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-target/5 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000" />
 
                                         <div className="flex items-start justify-between gap-5 relative z-10">
                                             {/* DATE BADGE */}
-                                            <div className="flex-shrink-0 text-center bg-black/40 border border-white/10 rounded-xl p-3 min-w-[30px] group-hover:border-[rgb(var(--color-target))] transition-colors">
-                                                <div className="text-2xl font-black text-[rgb(var(--color-target))] leading-none mb-1">
+                                            <div className="flex-shrink-0 text-center bg-black/40 border border-white/10 rounded-xl p-3 min-w-[30px] group-hover:border-target transition-colors">
+                                                <div className="text-2xl font-black text-target leading-none mb-1">
                                                     {eventDate.getDate()}
                                                 </div>
                                                 <div className="text-[10px] font-bold text-gray-400 uppercase tracking-wider">
@@ -133,7 +133,7 @@ export default function EventsPage() {
                                             {/* EVENT INFO */}
                                             <div className="flex-1 min-w-0">
                                                 <div className="flex flex-wrap items-start justify-between gap-2 mb-2">
-                                                    <h4 className="text-lg font-bold text-white group-hover:text-[rgb(var(--color-target))] transition-colors line-clamp-1 pr-2">
+                                                    <h4 className="text-lg font-bold text-white group-hover:text-target transition-colors line-clamp-1 pr-2">
                                                         {event.name}
                                                     </h4>
                                                     <span className={`text-[10px] px-2 py-1 rounded-full font-bold uppercase tracking-wider border ${getStatusColor(status)}`}>
@@ -151,7 +151,7 @@ export default function EventsPage() {
                                                 </p>
 
                                                 {event.registration && status === 'Upcoming' && (
-                                                    <div className="mt-4 flex items-center gap-2 text-xs font-bold text-[rgb(var(--color-target))] opacity-80 group-hover:opacity-100 transition-opacity">
+                                                    <div className="mt-4 flex items-center gap-2 text-xs font-bold text-target opacity-80 group-hover:opacity-100 transition-opacity">
                                                         <ExternalLink size={12} />
                                                         <span>OPEN FOR REGISTRATION</span>
                                                     </div>
@@ -174,7 +174,7 @@ export default function EventsPage() {
                         >
                             <div className="relative">
                                 {/* Decorative Elements around calendar */}
-                                <div className="absolute -inset-1 rounded-3xl bg-gradient-to-b from-[rgba(var(--color-target),0.2)] to-transparent opacity-50 blur-lg" />
+                                <div className="absolute -inset-1 rounded-3xl bg-gradient-to-b from-target/20 to-transparent opacity-50 blur-lg" />
                                 <CyberCalendar onSelect={setSelectedEvent} />
                             </div>
                         </MotionDiv>

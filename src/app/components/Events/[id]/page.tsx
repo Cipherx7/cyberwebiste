@@ -26,7 +26,7 @@ export default function EventDetailPage() {
   }
 
   return (
-    <div className="min-h-screen bg-[rgb(var(--color-primary))] text-white">
+    <div className="min-h-screen bg-primary text-white">
 
       {/* ================= HERO ================= */}
       <section className="relative h-[70vh] w-full">
@@ -77,7 +77,7 @@ export default function EventDetailPage() {
           </p>
 
           {/* Collaboration */}
-          <p className="mt-4 text-[rgb(var(--color-target))] font-semibold">
+          <p className="mt-4 text-target font-semibold">
             Organized by CyberX Community in collaboration with Industry Experts
           </p>
         </section>
@@ -93,7 +93,7 @@ export default function EventDetailPage() {
               {event.speakers.map((s, i) => (
                 <div
                   key={i}
-                  className="bg-[rgb(var(--color-secondary))] rounded-2xl p-6 text-center hover:scale-105 transition"
+                  className="bg-secondary rounded-2xl p-6 text-center hover:scale-105 transition"
                 >
                   {/* Speaker Image */}
                   <div className="relative h-32 w-32 mx-auto mb-4 rounded-full overflow-hidden">
@@ -115,12 +115,12 @@ export default function EventDetailPage() {
                   <div className="flex justify-center gap-4 mt-4">
                     {s.linkedin && (
                       <a href={s.linkedin} target="_blank">
-                        <Linkedin className="hover:text-[rgb(var(--color-target))]" />
+                        <Linkedin className="hover:text-target" />
                       </a>
                     )}
                     {s.twitter && (
                       <a href={s.twitter} target="_blank">
-                        <Twitter className="hover:text-[rgb(var(--color-target))]" />
+                        <Twitter className="hover:text-target" />
                       </a>
                     )}
                   </div>
@@ -161,7 +161,7 @@ export default function EventDetailPage() {
             <a
               href={event.registration}
               target="_blank"
-              className="inline-block bg-[rgb(var(--color-target))] text-black px-10 py-4 rounded-xl font-semibold text-lg hover:scale-105 transition"
+              className="inline-block bg-target text-black px-10 py-4 rounded-xl font-semibold text-lg hover:scale-105 transition"
             >
               Register Now
             </a>

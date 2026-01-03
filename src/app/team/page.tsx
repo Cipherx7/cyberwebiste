@@ -186,13 +186,11 @@ type SocialPlatform = keyof typeof socialIcons
 
 export default function TeamPage() {
   return (
-    <div className="bg-[rgb(var(--color-primary))]">
+    <div className="bg-primary">
       {/* 🟡 TITLE COLOR FIXED */}
       <SectionContainer
         id="team"
-        title={"The Faces Behind CyberX"
-
-        }
+        title={"The Faces Behind CyberX"}
       >
         {/* BACK BUTTON */}
         <Link
@@ -200,7 +198,7 @@ export default function TeamPage() {
           className="
             flex items-center gap-2 mb-10
             text-gray-400
-            hover:text-[rgb(var(--color-target))]
+            hover:text-target
             transition
           "
         >
@@ -218,17 +216,17 @@ export default function TeamPage() {
               transition={{ duration: 0.45 }}
               className="
                 relative
-                bg-[rgba(var(--color-secondary),0.75)]
+                bg-secondary/75
                 backdrop-blur
-                border border-[rgba(var(--color-target),0.25)]
+                border border-target/25
                 rounded-2xl
                 p-5
-                hover:border-[rgb(var(--color-target))]
+                hover:border-target
                 transition
               "
             >
               {/* IMAGE */}
-              <div className="w-full aspect-square mb-4 rounded-xl overflow-hidden border border-[rgba(var(--color-target),0.3)]">
+              <div className="w-full aspect-square mb-4 rounded-xl overflow-hidden border border-target/30">
                 {member.image ? (
                   <img
                     src={member.image}
@@ -248,7 +246,7 @@ export default function TeamPage() {
                   {member.name}
                 </h3>
 
-                <p className="text-[rgb(var(--color-target))] text-xs mt-1 mb-3">
+                <p className="text-target text-xs mt-1 mb-3">
                   {member.role}
                 </p>
 
@@ -269,10 +267,10 @@ export default function TeamPage() {
                       rel="noopener noreferrer"
                       className="
                         p-2 rounded-full
-                        bg-[rgb(var(--color-primary))]
-                        border border-[rgba(var(--color-target),0.3)]
+                        bg-primary
+                        border border-target/30
                         text-gray-300
-                        hover:bg-[rgb(var(--color-target))]
+                        hover:bg-target
                         hover:text-black
                         transition
                       "
@@ -295,10 +293,10 @@ export default function TeamPage() {
                     className="
                       w-full py-2 rounded-lg
                       bg-black
-                      text-[rgb(var(--color-target))]
+                      text-target
                       font-bold
-                      border border-[rgb(var(--color-target))]
-                      hover:bg-[rgb(var(--color-target))]
+                      border border-target
+                      hover:bg-target
                       hover:text-black
                       transition
                     "

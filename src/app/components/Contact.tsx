@@ -15,13 +15,13 @@ export const Contact = () => {
         className="relative mx-auto max-w-4xl px-4 text-center"
       >
         {/* BACKGROUND GLOW */}
-        <div className="pointer-events-none absolute -top-32 left-1/2 -translate-x-1/2 w-[420px] h-[420px] rounded-full bg-[rgba(var(--color-target),0.08)] blur-[120px]" />
+        <div className="pointer-events-none absolute -top-32 left-1/2 -translate-x-1/2 w-[420px] h-[420px] rounded-full bg-target/10 blur-[120px]" />
 
         {/* CONTENT */}
         <div className="relative z-10 space-y-6">
 
           {/* TAGLINE */}
-          <p className="text-sm tracking-widest uppercase text-[rgb(var(--color-target))]">
+          <p className="text-sm tracking-widest uppercase text-target">
             Join the Network
           </p>
 
@@ -29,7 +29,7 @@ export const Contact = () => {
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-tight">
             Build, Learn & Defend
             <br />
-            <span className="text-[rgb(var(--color-target))]">
+            <span className="text-target">
               with CyberX
             </span>
           </h2>
@@ -51,13 +51,13 @@ export const Contact = () => {
                 key={i}
                 className="
                   rounded-xl
-                  border border-[rgba(var(--color-target),0.3)]
+                  border border-target/30
                   px-4 py-3
-                  bg-[rgba(var(--color-secondary),0.6)]
+                  bg-secondary/60
                   text-gray-300
                 "
               >
-                <span className="text-[rgb(var(--color-target))]">▸</span>{' '}
+                <span className="text-target">▸</span>{' '}
                 {item}
               </div>
             ))}
@@ -78,11 +78,11 @@ export const Contact = () => {
                 inline-flex items-center gap-3
                 rounded-xl
                 bg-black
-                border border-[rgb(var(--color-target))]
+                border border-target
                 px-10 py-4
                 font-bold
-                text-[rgb(var(--color-target))]
-                hover:bg-[rgb(var(--color-target))]
+                text-target
+                hover:bg-target
                 hover:text-black
                 transition-all
               "

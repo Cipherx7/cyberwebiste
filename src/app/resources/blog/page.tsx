@@ -15,7 +15,7 @@ export default function BlogPage() {
             <div className="absolute inset-0 bg-[linear-gradient(to_right,#0f0f0f_1px,transparent_1px),linear-gradient(to_bottom,#0f0f0f_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] pointer-events-none" />
 
             {/* GLOW EFFECTS */}
-            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[400px] bg-[rgb(var(--color-target))] opacity-[0.03] blur-[120px] rounded-full pointer-events-none" />
+            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[400px] bg-target opacity-[0.03] blur-[120px] rounded-full pointer-events-none" />
 
             {/* CONTENT WRAPPER */}
             <div className="relative z-20">
@@ -25,7 +25,7 @@ export default function BlogPage() {
                     <div className="max-w-7xl mx-auto w-full mb-12 px-4">
                         <Link
                             href="/"
-                            className="inline-flex items-center gap-2 text-gray-500 hover:text-[rgb(var(--color-target))] transition-colors text-sm uppercase tracking-widest font-mono"
+                            className="inline-flex items-center gap-2 text-gray-500 hover:text-target transition-colors text-sm uppercase tracking-widest font-mono"
                         >
                             <ArrowLeft size={16} /> // RETURN_ROOT
                         </Link>
@@ -39,7 +39,7 @@ export default function BlogPage() {
                             transition={{ duration: 0.6 }}
                         >
                             <div className="inline-flex items-center justify-center gap-2 mb-6 px-4 py-1.5 rounded-full border border-white/10 bg-white/5 backdrop-blur-sm">
-                                <Activity size={14} className="text-[rgb(var(--color-target))] animate-pulse" />
+                                <Activity size={14} className="text-target animate-pulse" />
                                 <span className="text-xs font-bold text-gray-300 tracking-wider">LIVE FEED :: ENCRYPTED</span>
                             </div>
 
@@ -47,7 +47,7 @@ export default function BlogPage() {
                                 INSIGHTS
                             </h1>
 
-                            <div className="h-px w-24 mx-auto bg-[rgb(var(--color-target))] mb-8" />
+                            <div className="h-px w-24 mx-auto bg-target mb-8" />
 
                             <p className="text-lg sm:text-xl text-gray-400 max-w-2xl mx-auto leading-relaxed font-light">
                                 Decoded transmissions from the frontline of cybersecurity.
@@ -83,7 +83,7 @@ export default function BlogPage() {
 
                                 <div className="space-y-2 text-sm sm:text-base">
                                     <p className="text-gray-500">
-                                        <span className="text-[rgb(var(--color-target))]">root@cyberx:~$</span> ./fetch_logs.sh --latest
+                                        <span className="text-target">root@cyberx:~$</span> ./fetch_logs.sh --latest
                                     </p>
                                     <p className="text-gray-400">
                                         [+] Establishing secure connection... <span className="text-green-500">Done</span>
@@ -102,7 +102,7 @@ export default function BlogPage() {
                                 <div className="mt-12">
                                     <Link
                                         href="mailto:Cyberx.nashik@gmail.com"
-                                        className="inline-flex items-center gap-3 px-6 py-3 border border-[rgb(var(--color-target))] text-[rgb(var(--color-target))] hover:bg-[rgb(var(--color-target))] hover:text-black transition-all duration-300 rounded text-sm uppercase tracking-wider font-bold"
+                                        className="inline-flex items-center gap-3 px-6 py-3 border border-target text-target hover:bg-target hover:text-black transition-all duration-300 rounded text-sm uppercase tracking-wider font-bold"
                                     >
                                         <Terminal size={16} /> Initialize Input Stream
                                     </Link>

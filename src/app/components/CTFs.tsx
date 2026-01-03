@@ -25,7 +25,7 @@ export const CTFs = () => {
             height={120}
             className="rounded"
           />
-          <span className="text-4xl text-[rgb(var(--color-target))] font-bold">
+          <span className="text-4xl text-target font-bold">
             ×
           </span>
           <Image
@@ -50,7 +50,7 @@ export const CTFs = () => {
           className="mx-auto max-w-3xl text-gray-300 text-base sm:text-lg leading-relaxed"
         >
           At{' '}
-          <span className="text-[rgb(var(--color-target))] font-semibold">
+          <span className="text-target font-semibold">
             CyberX
           </span>
           , CTFs are more than competitions — they’re hands-on playgrounds where
@@ -61,15 +61,15 @@ export const CTFs = () => {
         {/* CTF TYPES */}
         <ul className="mt-6 mb-8 space-y-2 text-sm sm:text-base text-gray-300">
           <li>
-            <span className="text-[rgb(var(--color-target))]">▸</span>{' '}
+            <span className="text-target">▸</span>{' '}
             Jeopardy-style challenges (Web, Crypto, Forensics, Pwn)
           </li>
           <li>
-            <span className="text-[rgb(var(--color-target))]">▸</span>{' '}
+            <span className="text-target">▸</span>{' '}
             Attack & Defense (Red vs Blue team scenarios)
           </li>
           <li>
-            <span className="text-[rgb(var(--color-target))]">▸</span>{' '}
+            <span className="text-target">▸</span>{' '}
             Beginner-friendly & advanced level competitions
           </li>
         </ul>
@@ -90,11 +90,11 @@ export const CTFs = () => {
             className="
     inline-flex items-center justify-center gap-2
     rounded-lg
-    border border-[rgb(var(--color-target))]
+    border border-target
     px-7 py-3
     font-semibold
-    text-[rgb(var(--color-target))]
-    hover:bg-[rgb(var(--color-target))]
+    text-target
+    hover:bg-target
     hover:text-black
     transition
 

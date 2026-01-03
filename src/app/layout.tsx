@@ -1,10 +1,11 @@
 import './globals.css'
 import type { Metadata } from 'next'
-import { Saira } from 'next/font/google'
+import { Inter, Orbitron } from 'next/font/google'
 
 import Providers from './providers'
 
-const saira = Saira({ subsets: ['latin'] })
+const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
+const orbitron = Orbitron({ subsets: ['latin'], variable: '--font-orbitron' })
 
 export const metadata: Metadata = {
   title: 'CyberX',
@@ -22,7 +23,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={saira.className}>
+      <body className={`${inter.variable} ${orbitron.variable} font-sans bg-primary text-white`}>
         <Providers>
           {children}
           <Footer />

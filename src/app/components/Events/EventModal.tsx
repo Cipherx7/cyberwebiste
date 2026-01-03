@@ -20,7 +20,7 @@ export const EventModal = ({ event, onClose }: any) => {
     >
       <div
         onClick={e => e.stopPropagation()}
-        className="bg-[rgb(var(--color-secondary))] rounded-2xl max-w-md w-full p-6"
+        className="bg-secondary rounded-2xl max-w-md w-full p-6"
       >
         {/* Status */}
         <span
@@ -45,7 +45,7 @@ export const EventModal = ({ event, onClose }: any) => {
             <a
               href={event.registration}
               target="_blank"
-              className="block text-center bg-[rgb(var(--color-target))] text-black py-2 rounded-xl font-semibold hover:scale-105 transition"
+              className="block text-center bg-target text-black py-2 rounded-xl font-semibold hover:scale-105 transition"
             >
               Register Now
             </a>
@@ -54,7 +54,7 @@ export const EventModal = ({ event, onClose }: any) => {
           {/* Learn More / Explore More */}
           <Link
             href={`/components/Events/${event.id}`}
-            className="block text-center border border-[rgb(var(--color-target))] text-[rgb(var(--color-target))] py-2 rounded-xl font-semibold hover:bg-[rgb(var(--color-target))] hover:text-black transition"
+            className="block text-center border border-target text-target py-2 rounded-xl font-semibold hover:bg-target hover:text-black transition"
           >
             Explore More
           </Link>

@@ -32,9 +32,9 @@ export const EventGallery = () => {
             <div className="mt-16 mb-12 relative z-10 w-full max-w-[95vw] mx-auto">
                 <div className="flex items-center justify-between mb-6 px-4">
                     <div className="flex items-center gap-3">
-                        <Camera className="text-[rgb(var(--color-target))]" size={28} />
+                        <Camera className="text-target" size={28} />
                         <h2 className="text-3xl font-bold">
-                            Mission <span className="text-[rgb(var(--color-target))]">Gallery</span>
+                            Mission <span className="text-target">Gallery</span>
                         </h2>
                     </div>
 
@@ -42,13 +42,13 @@ export const EventGallery = () => {
                     <div className="flex gap-2">
                         <button
                             onClick={() => scroll('left')}
-                            className="p-2 rounded-full border border-white/20 hover:bg-white/10 hover:border-[rgb(var(--color-target))] transition-all"
+                            className="p-2 rounded-full border border-white/20 hover:bg-white/10 hover:border-target transition-all"
                         >
                             <ChevronLeft size={20} />
                         </button>
                         <button
                             onClick={() => scroll('right')}
-                            className="p-2 rounded-full border border-white/20 hover:bg-white/10 hover:border-[rgb(var(--color-target))] transition-all"
+                            className="p-2 rounded-full border border-white/20 hover:bg-white/10 hover:border-target transition-all"
                         >
                             <ChevronRight size={20} />
                         </button>
@@ -67,7 +67,7 @@ export const EventGallery = () => {
                             whileInView={{ opacity: 1, x: 0 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.5, delay: i * 0.1 }}
-                            className="relative flex-shrink-0 w-[300px] md:w-[400px] aspect-[4/3] group overflow-hidden rounded-2xl cursor-pointer snap-center border border-white/10 hover:border-[rgb(var(--color-target))]"
+                            className="relative flex-shrink-0 w-[300px] md:w-[400px] aspect-[4/3] group overflow-hidden rounded-2xl cursor-pointer snap-center border border-white/10 hover:border-target"
                             onClick={() => setSelectedImage(img.src)}
                         >
                             <Image
@@ -81,7 +81,7 @@ export const EventGallery = () => {
                             <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
                                 <div className="transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
                                     <h3 className="text-white font-bold text-lg mb-1">{img.alt}</h3>
-                                    <div className="flex items-center gap-2 text-[rgb(var(--color-target))] text-sm">
+                                    <div className="flex items-center gap-2 text-target text-sm">
                                         <Maximize2 size={14} />
                                         <span>View Fullscreen</span>
                                     </div>

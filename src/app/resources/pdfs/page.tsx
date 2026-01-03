@@ -9,14 +9,14 @@ export default function PDFsPage() {
     return (
         <div className="bg-black min-h-screen relative overflow-hidden">
             {/* BACKGROUND ELEMENTS */}
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_right,_rgba(var(--color-target),0.05),_transparent_60%)] pointer-events-none" />
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_right,rgba(250,204,21,0.05),transparent_60%)] pointer-events-none" />
             <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:30px_30px] opacity-20 pointer-events-none" />
 
             <SectionContainer id="pdfs-page" title="Knowledge Archive">
                 {/* BACK BUTTON */}
                 <Link
                     href="/"
-                    className="relative z-10 inline-flex items-center gap-2 mb-8 text-gray-400 hover:text-[rgb(var(--color-target))] hover:translate-x-[-5px] transition-all"
+                    className="relative z-10 inline-flex items-center gap-2 mb-8 text-gray-400 hover:text-target hover:translate-x-[-5px] transition-all"
                 >
                     <ArrowLeft size={18} /> Back to Home
                 </Link>
@@ -31,11 +31,11 @@ export default function PDFsPage() {
                         className="mb-8 relative"
                     >
                         {/* Animated Icon Wrapper */}
-                        <div className="w-32 h-32 rounded-full bg-[rgba(var(--color-target),0.1)] border border-[rgba(var(--color-target),0.3)] flex items-center justify-center relative overflow-hidden">
+                        <div className="w-32 h-32 rounded-full bg-target/10 border border-target/30 flex items-center justify-center relative overflow-hidden">
                             <div className="absolute inset-0 animate-spin-slow opacity-30">
-                                <div className="w-full h-full border-t-2 border-[rgb(var(--color-target))] rounded-full" />
+                                <div className="w-full h-full border-t-2 border-target rounded-full" />
                             </div>
-                            <FileText size={48} className="text-[rgb(var(--color-target))] relative z-10" />
+                            <FileText size={48} className="text-target relative z-10" />
                         </div>
 
                         {/* Floating Elements */}
@@ -56,11 +56,11 @@ export default function PDFsPage() {
                     </MotionDiv>
 
                     <h2 className="text-4xl sm:text-5xl font-extrabold mb-6 tracking-tight">
-                        Archiving <span className="text-[rgb(var(--color-target))]">Protocols</span>
+                        Archiving <span className="text-target">Protocols</span>
                     </h2>
 
                     <div className="bg-[rgba(255,255,255,0.05)] border border-white/10 rounded-xl p-6 sm:p-8 max-w-2xl w-full backdrop-blur-sm">
-                        <div className="flex items-center justify-center gap-3 text-[rgb(var(--color-target))] font-mono text-lg mb-4">
+                        <div className="flex items-center justify-center gap-3 text-target font-mono text-lg mb-4">
                             <Loader2 size={24} className="animate-spin" />
                             <span>UPLOADING RESOURCES...</span>
                         </div>
@@ -70,7 +70,7 @@ export default function PDFsPage() {
                         </p>
 
                         <div className="mt-8 h-2 w-full bg-gray-800 rounded-full overflow-hidden">
-                            <div className="h-full bg-[rgb(var(--color-target))] w-[60%] animate-pulse rounded-full" />
+                            <div className="h-full bg-target w-[60%] animate-pulse rounded-full" />
                         </div>
                         <p className="text-right text-xs text-gray-500 mt-2 font-mono">ESTIMATED COMPLETION: SOON</p>
                     </div>

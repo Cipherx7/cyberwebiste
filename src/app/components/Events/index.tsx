@@ -16,11 +16,11 @@ export const Events = () => {
         className="relative max-w-6xl mx-auto px-4"
       >
         {/* PANEL FRAME */}
-        <div className="relative border border-[rgba(var(--color-target),0.4)] rounded-2xl p-8 sm:p-10 bg-[rgba(var(--color-secondary),0.6)] backdrop-blur">
+        <div className="relative border border-target/40 rounded-2xl p-8 sm:p-10 bg-secondary/60 backdrop-blur">
 
           {/* TOP BAR */}
           <div className="flex items-center justify-between mb-8">
-            <p className="text-sm tracking-widest text-[rgb(var(--color-target))]">
+            <p className="text-sm tracking-widest text-target">
               CYBERX :: EVENTS CALENDAR
             </p>
             <span className="text-xs text-green-400">● ACTIVE</span>
@@ -34,7 +34,7 @@ export const Events = () => {
               <h2 className="text-4xl sm:text-5xl font-extrabold leading-tight">
                 Never Miss
                 <br />
-                <span className="text-[rgb(var(--color-target))]">
+                <span className="text-target">
                   An Event
                 </span>
               </h2>
@@ -60,15 +60,15 @@ export const Events = () => {
                   key={i}
                   className="
                     flex items-center gap-4
-                    border border-[rgba(var(--color-target),0.3)]
+                    border border-target/30
                     rounded-xl
                     px-5 py-4
                     text-gray-300
-                    hover:border-[rgb(var(--color-target))]
+                    hover:border-target
                     transition
                   "
                 >
-                  <item.icon className="text-[rgb(var(--color-target))]" />
+                  <item.icon className="text-target" />
                   <span className="text-sm sm:text-base">{item.label}</span>
                 </div>
               ))}
@@ -87,10 +87,10 @@ export const Events = () => {
                 inline-flex items-center gap-2
                 px-8 py-3
                 rounded-lg
-                border border-[rgb(var(--color-target))]
-                text-[rgb(var(--color-target))]
+                border border-target
+                text-target
                 font-semibold
-                hover:bg-[rgb(var(--color-target))]
+                hover:bg-target
                 hover:text-black
                 transition
               "

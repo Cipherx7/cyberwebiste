@@ -8,13 +8,12 @@ import { MotionHeader } from '@/app/lib/motion'
 export const Header = () => {
   return (
     <MotionHeader
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.3 }}
-      className="fixed z-30 w-full bg-primary px-10 sm:px-6"
+      initial={{ y: -100, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ duration: 0.5, ease: 'easeOut' }}
+      className="fixed top-0 z-50 w-full glass border-b border-white/5"
     >
-      <div className="mx-auto max-w-5xl">
+      <div className="mx-auto max-w-7xl px-6 lg:px-8">
         {/* MOBILE VIEW (< md) */}
         <div className="flex h-20 items-center justify-between md:hidden">
           <Logo />
@@ -22,7 +21,7 @@ export const Header = () => {
         </div>
 
         {/* DESKTOP VIEW (>= md) */}
-        <div className="hidden h-28 items-center justify-between md:flex">
+        <div className="hidden h-24 items-center justify-between md:flex">
           <Logo />
           <NavBar />
           <ThemeSwitcher />

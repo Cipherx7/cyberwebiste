@@ -5,80 +5,87 @@ import { MotionDiv, MotionH1, MotionP } from '../lib/motion'
 import { FaDiscord, FaInstagram, FaLinkedin, FaWhatsapp } from 'react-icons/fa'
 import { BinaryRain } from './BinaryRain'
 import Link from 'next/link'
+import { ChevronDown } from 'lucide-react'
 
 export const Hero = () => {
   return (
     <section
       id="home"
-      className="relative min-h-screen w-full overflow-hidden bg-black text-white"
+      className="relative min-h-screen w-full overflow-hidden bg-primary text-white flex flex-col justify-center"
     >
       {/* Binary Background */}
-      <BinaryRain />
+      <div className="absolute inset-0 opacity-40">
+        <BinaryRain />
+      </div>
 
       {/* MASSIVE X — FULL DESKTOP DOMINANCE */}
       <motion.div
-        initial={{ opacity: 0, scale: 0.9 }}
-        animate={{ opacity: 0.12, scale: 1 }}
-        transition={{ duration: 1.2, ease: 'easeOut' }}
-        className="absolute inset-0 flex items-center justify-center pointer-events-none"
+        initial={{ opacity: 0, scale: 0.8 }}
+        animate={{ opacity: 0.05, scale: 1 }}
+        transition={{ duration: 1.5, ease: 'easeOut' }}
+        className="absolute inset-0 flex items-center justify-center pointer-events-none select-none"
       >
-        <motion.span
-          animate={{ scale: [1, 1.08, 1] }}
-          transition={{ duration: 7, repeat: Infinity, ease: 'easeInOut' }}
+        <span
           className="
             font-extrabold leading-none
-            text-[65vw] sm:text-[50vw] lg:text-[40vw]
-            text-[rgb(var(--color-target))]
+            text-[60vw] lg:text-[40vw]
+            text-target opacity-10
+            font-orbitron
           "
-          style={{ fontFamily: 'Orbitron, sans-serif' }}
         >
           X
-        </motion.span>
+        </span>
       </motion.div>
 
       {/* Dark overlay for readability */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-black/90" />
+      <div className="absolute inset-0 bg-gradient-to-b from-primary/80 via-primary/40 to-primary/90" />
 
       {/* HERO CONTENT — FULL WIDTH */}
-      <div className="relative z-10 flex min-h-screen flex-col items-center justify-center px-6 text-center">
+      <div className="relative z-10 flex flex-col items-center justify-center px-4 sm:px-6 text-center max-w-5xl mx-auto mt-20">
 
         {/* WE ARE */}
         <MotionP
-          initial={{ opacity: 0, y: -10 }}
+          initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.4 }}
-          className="mb-4 text-sm tracking-[0.4em] uppercase text-gray-400"
+          transition={{ duration: 0.6 }}
+          className="mb-6 text-sm sm:text-base tracking-[0.5em] uppercase text-target font-medium"
         >
           We Are
         </MotionP>
 
         {/* CYBERX */}
         <MotionH1
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="font-extrabold leading-none"
-          style={{ fontFamily: 'Orbitron, sans-serif' }}
+          initial={{ opacity: 0, scale: 0.9 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.8, type: 'spring' }}
+          className="font-extrabold leading-none font-orbitron tracking-tighter"
         >
-          <span className="block text-[4.5rem] sm:text-[6rem] md:text-[8rem] lg:text-[9rem]">
-            <span className="text-white">Cyber</span>
-            <span className="text-[rgb(var(--color-target))]">X</span>
-          </span>
-          <br></br>
-          <span className="mt-4 block text-xl sm:text-2xl md:text-3xl text-gray-300 font-semibold">
-           <br></br> Nashik's First <span className="text-[rgb(var(--color-target))]">CyberSecurity</span> Community
+          <span className="block text-6xl sm:text-8xl md:text-9xl lg:text-[10rem] bg-clip-text text-transparent bg-gradient-to-b from-white to-gray-500">
+            CYBER
+            <span className="text-target inline-block animate-pulse-slow">X</span>
           </span>
         </MotionH1>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.3, duration: 0.6 }}
+          className="mt-6"
+        >
+          <span className="text-xl sm:text-2xl md:text-3xl text-gray-300 font-light">
+            Nashik's First <span className="text-target font-semibold">CyberSecurity</span> Community
+          </span>
+        </motion.div>
 
         {/* TAGLINE */}
         <MotionP
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.2, duration: 0.4 }}
-          className="mt-8 max-w-3xl text-base sm:text-lg md:text-xl text-gray-300"
+          transition={{ delay: 0.5, duration: 0.6 }}
+          className="mt-8 max-w-2xl text-base sm:text-lg text-gray-400 leading-relaxed"
         >
           Where{' '}
-          <span className="text-[rgb(var(--color-target))] font-semibold">
+          <span className="text-white font-medium">
             cybersecurity
           </span>{' '}
           meets community, collaboration, and real-world skills.
@@ -88,26 +95,33 @@ export const Hero = () => {
         <MotionDiv
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.4, duration: 0.4 }}
-          className="mt-14"
+          transition={{ delay: 0.7, duration: 0.6 }}
+          className="mt-12 flex flex-col sm:flex-row gap-6 items-center"
         >
           <Link
             href="https://chat.whatsapp.com/JO3LjPpnU73JflUzzkOiY9"
             target="_blank"
             className="
+              relative group
               inline-flex items-center justify-center
-              rounded-2xl
-              border-2 border-[rgb(var(--color-target))]
-              px-12 py-4
+              px-8 py-4
               text-lg font-bold
-              text-[rgb(var(--color-target))]
-              hover:bg-[rgb(var(--color-target))]
-              hover:text-black
-              transition
-              shadow-[0_0_40px_rgba(255,196,0,0.35)]
+              text-black bg-target
+              rounded-full
+              overflow-hidden
+              transition-all duration-300
+              hover:scale-105 hover:shadow-[0_0_30px_rgba(250,204,21,0.4)]
             "
           >
-            Join CyberX Community
+            <span className="relative z-10">Join Community</span>
+            <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
+          </Link>
+
+          <Link
+            href="#about"
+            className="text-gray-400 hover:text-white transition-colors text-sm font-medium tracking-widest uppercase border-b border-transparent hover:border-target"
+          >
+            Learn More
           </Link>
         </MotionDiv>
 
@@ -115,23 +129,36 @@ export const Hero = () => {
         <MotionDiv
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          transition={{ delay: 0.7 }}
-          className="mt-16 flex gap-8 text-2xl text-[rgb(var(--color-target))]"
+          transition={{ delay: 1 }}
+          className="mt-16 flex gap-8 text-2xl text-gray-400"
         >
-          <a href="https://chat.whatsapp.com/JO3LjPpnU73JflUzzkOiY9" target="_blank">
-            <FaWhatsapp className="hover:scale-125 hover:text-[rgb(var(--color-accent))] transition" />
-          </a>
-          <a href="https://www.instagram.com/cyberx.nashik" target="_blank">
-            <FaInstagram className="hover:scale-125 hover:text-[rgb(var(--color-accent))] transition" />
-          </a>
-          <a href="https://in.linkedin.com/company/cyberx-nashik-community" target="_blank">
-            <FaLinkedin className="hover:scale-125 hover:text-[rgb(var(--color-accent))] transition" />
-          </a>
-          <a href="https://discord.gg/eTq4cnDQ" target="_blank">
-            <FaDiscord className="hover:scale-125 hover:text-[rgb(var(--color-accent))] transition" />
-          </a>
+          {[
+            { Icon: FaWhatsapp, href: "https://chat.whatsapp.com/JO3LjPpnU73JflUzzkOiY9" },
+            { Icon: FaInstagram, href: "https://www.instagram.com/cyberx.nashik" },
+            { Icon: FaLinkedin, href: "https://in.linkedin.com/company/cyberx-nashik-community" },
+            { Icon: FaDiscord, href: "https://discord.gg/eTq4cnDQ" }
+          ].map(({ Icon, href }, index) => (
+            <a
+              key={index}
+              href={href}
+              target="_blank"
+              className="hover:text-target hover:scale-110 transition-all duration-300"
+            >
+              <Icon />
+            </a>
+          ))}
         </MotionDiv>
       </div>
+
+      {/* Scroll Indicator */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1, y: [0, 10, 0] }}
+        transition={{ delay: 2, duration: 2, repeat: Infinity }}
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 text-gray-500"
+      >
+        <ChevronDown size={32} />
+      </motion.div>
     </section>
   )
 }

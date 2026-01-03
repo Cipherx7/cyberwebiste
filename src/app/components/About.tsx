@@ -24,7 +24,7 @@ export const About = () => {
               alt="CyberX Community Logo"
               width={180}
               height={180}
-              className="rounded-full border border-[rgb(var(--color-target))]"
+              className="rounded-full border border-target shadow-[0_0_20px_rgba(250,204,21,0.3)]"
               priority
             />
           </div>
@@ -33,7 +33,7 @@ export const About = () => {
           <div className="space-y-6 text-center md:text-left text-gray-300 text-base sm:text-lg leading-relaxed">
 
             <p className="text-xl sm:text-2xl font-semibold text-white">
-              Cyber<span className="text-[rgb(var(--color-target))]">X</span> is a
+              Cyber<span className="text-target">X</span> is a
               community built to shape the next generation of cybersecurity professionals.
             </p>
 
@@ -46,15 +46,15 @@ export const About = () => {
             {/* WHAT WE DO */}
             <ul className="space-y-2 text-sm sm:text-base">
               <li>
-                <span className="text-[rgb(var(--color-target))]">▸</span>{' '}
+                <span className="text-target">▸</span>{' '}
                 Hands-on workshops & cybersecurity sessions
               </li>
               <li>
-                <span className="text-[rgb(var(--color-target))]">▸</span>{' '}
+                <span className="text-target">▸</span>{' '}
                 Capture The Flag (CTF) competitions & challenges
               </li>
               <li>
-                <span className="text-[rgb(var(--color-target))]">▸</span>{' '}
+                <span className="text-target">▸</span>{' '}
                 Open community learning & collaboration
               </li>
             </ul>
@@ -75,14 +75,13 @@ export const About = () => {
                 className="
                 inline-flex items-center gap-2
                 rounded-lg
-                border border-[rgb(var(--color-target))]
+                border border-target
                 px-6 py-3
                 font-semibold
-                text-[rgb(var(--color-target))]
-                hover:bg-[rgb(var(--color-target))]
+                text-target
+                hover:bg-target
                 hover:text-black
                 transition
-
                 relative z-20 pointer-events-auto
   "
               >

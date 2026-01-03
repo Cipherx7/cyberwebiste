@@ -16,20 +16,20 @@ export const Footer = () => {
           {/* BRAND */}
           <div className="max-w-md">
             <Link href="/" className="inline-block text-2xl font-bold tracking-tighter mb-6 group">
-              Cyber<span className="text-[rgb(var(--color-target))] group-hover:text-white transition-colors">X</span>
+              Cyber<span className="text-target group-hover:text-white transition-colors">X</span>
             </Link>
             <p className="text-gray-400 leading-relaxed mb-6">
               A community-driven platform for cybersecurity enthusiasts.
               Bridging the gap between theory and real-world exploitation through CTFs, workshops, and research.
             </p>
             <div className="flex items-center gap-4">
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="p-2 rounded-full bg-white/5 hover:bg-[rgb(var(--color-target))] hover:text-black transition-all">
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="p-2 rounded-full bg-white/5 hover:bg-target hover:text-black transition-all">
                 <Linkedin size={18} />
               </a>
-              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="p-2 rounded-full bg-white/5 hover:bg-[rgb(var(--color-target))] hover:text-black transition-all">
+              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="p-2 rounded-full bg-white/5 hover:bg-target hover:text-black transition-all">
                 <Instagram size={18} />
               </a>
-              <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="p-2 rounded-full bg-white/5 hover:bg-[rgb(var(--color-target))] hover:text-black transition-all">
+              <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="p-2 rounded-full bg-white/5 hover:bg-target hover:text-black transition-all">
                 <Github size={18} />
               </a>
             </div>
@@ -42,16 +42,16 @@ export const Footer = () => {
               <h3 className="font-bold text-white mb-6 tracking-wider uppercase text-sm">Navigation</h3>
               <ul className="space-y-4 text-gray-400">
                 <li>
-                  <Link href="/" className="hover:text-[rgb(var(--color-target))] transition-colors">Home</Link>
+                  <Link href="/" className="hover:text-target transition-colors">Home</Link>
                 </li>
                 <li>
-                  <Link href="/about" className="hover:text-[rgb(var(--color-target))] transition-colors">About Us</Link>
+                  <Link href="/about" className="hover:text-target transition-colors">About Us</Link>
                 </li>
                 <li>
-                  <Link href="/events" className="hover:text-[rgb(var(--color-target))] transition-colors">Events</Link>
+                  <Link href="/events" className="hover:text-target transition-colors">Events</Link>
                 </li>
                 <li>
-                  <Link href="/team" className="hover:text-[rgb(var(--color-target))] transition-colors">Team</Link>
+                  <Link href="/team" className="hover:text-target transition-colors">Team</Link>
                 </li>
               </ul>
             </div>
@@ -61,16 +61,16 @@ export const Footer = () => {
               <h3 className="font-bold text-white mb-6 tracking-wider uppercase text-sm">Resources</h3>
               <ul className="space-y-4 text-gray-400">
                 <li>
-                  <Link href="/ctfs" className="hover:text-[rgb(var(--color-target))] transition-colors">CTF Arena</Link>
+                  <Link href="/ctfs" className="hover:text-target transition-colors">CTF Arena</Link>
                 </li>
                 <li>
-                  <Link href="/resources/tools" className="hover:text-[rgb(var(--color-target))] transition-colors">Tools Library</Link>
+                  <Link href="/resources/tools" className="hover:text-target transition-colors">Tools Library</Link>
                 </li>
                 <li>
-                  <Link href="/resources/blog" className="hover:text-[rgb(var(--color-target))] transition-colors">Security Blog</Link>
+                  <Link href="/resources/blog" className="hover:text-target transition-colors">Security Blog</Link>
                 </li>
                 <li>
-                  <Link href="/resources/pdfs" className="hover:text-[rgb(var(--color-target))] transition-colors">Archives</Link>
+                  <Link href="/resources/pdfs" className="hover:text-target transition-colors">Archives</Link>
                 </li>
               </ul>
             </div>
@@ -82,7 +82,7 @@ export const Footer = () => {
           <p>© {currentYear} CyberX. All rights reserved.</p>
 
           <div className="flex items-center gap-6">
-            <a href="mailto:Cyberx.nashik@gmail.com" className="hover:text-[rgb(var(--color-target))] transition-colors flex items-center gap-2">
+            <a href="mailto:Cyberx.nashik@gmail.com" className="hover:text-target transition-colors flex items-center gap-2">
               <Mail size={14} /> Cyberx.nashik@gmail.com
             </a>
           </div>
