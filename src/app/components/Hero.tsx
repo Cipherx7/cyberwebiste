@@ -60,7 +60,7 @@ export const Hero = () => {
           transition={{ duration: 0.8, type: 'spring', bounce: 0.5 }}
           className="font-extrabold leading-none font-orbitron tracking-tighter"
         >
-          <span className="block text-6xl sm:text-8xl md:text-9xl lg:text-[10rem] bg-clip-text text-transparent bg-gradient-to-b from-white to-gray-500">
+          <span className="block text-5xl sm:text-8xl md:text-9xl lg:text-[10rem] bg-clip-text text-transparent bg-gradient-to-b from-white to-gray-500 whitespace-nowrap">
             CYBER
             <span className="text-target inline-block animate-pulse-slow">X</span>
           </span>
